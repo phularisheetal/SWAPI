@@ -1,0 +1,37 @@
+.login {
+  width: 25%;
+  height: 300px;
+  text-align: center;
+  box-shadow: 5px 5px 4px 4px grey;
+}
+
+.login h3 {
+  font-size: 30px;
+  font-weight: 400;
+}
+.loginForm {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 50%;
+  align-items: center;
+}
+.loginForm  input,.loginForm  button {
+  width: 70%
+}
+.loginForm  input {
+  height: 30px;
+  border-style: none;
+  border: solid 1px lightgrey;
+  border-radius: 5px
+}
+
+
+.loginForm button {
+  height: 30px;
+  background: rgb(57,165,240);
+  color:white;
+  font-size: 14px;
+  box-shadow: none;
+  border-style: none;
+}
