@@ -13,17 +13,24 @@ class Login extends React.Component {
     }
 
     componentWillReceiveProps(nextProps){
+      if(this.props.login !== nextProps.login) {
+        debugger
         if(nextProps.login == 'SUCCESS') {
+          console.log('abc')
+
             this.props.history.push('/home')
-        }else {
+        }else if(nextProps.login == 'FAILURE'){
           this.props.history.push('/')
 
         }
+      }
+
     }
     getUserDetails() {
       this.props.getPersonDetail(this.refs.username.value,this.refs.password.value)
     }
     render() {
+
       if(this.props.login == 'LOADING'){
         return <div>Loading...</div>
       }
@@ -39,7 +46,6 @@ class Login extends React.Component {
 }
 
 function mapStateToProps(state) {
-  debugger
  return {login:state.login}
 }
 
